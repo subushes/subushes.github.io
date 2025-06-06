@@ -113,6 +113,30 @@
 	    display: inline-block;
 	}
 
+	ol.reversedd {
+	    list-style: none;
+	    counter-reset: item 5; /* One more than start value */
+	    padding-left: 1.5em;
+	}
+	
+	ol.reversedd li {
+	    counter-increment: item -1;
+	    position: relative;
+	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
+	    margin-bottom: 1rem;
+	    font-size: 1.1rem;
+	    line-height: 1.6;
+	}
+	
+	ol.reversedd li::before {
+	    content: "[" counter(item) "].";
+	    position: absolute;
+	    left: 0;
+	    
+	    width: 3em; /* Adds spacing between number and text */
+	    display: inline-block;
+	}
+
         section {
             padding: 2rem 1rem; /* Adjust side padding */
             margin: 0 auto;
@@ -225,7 +249,7 @@
     </section>
     <section>
         <h2>White Papers</h2>
-        <ol class="reversed-bracketed">
+        <ol class="reversedd">
 	<hr width="100%" color='black' size="1.5">
 	<div style="background-color:#D6EAF8; padding: 15px; border-radius: 10px;"> 
 		<li> The Physics of Collisionless Dissipation in the Heliosphere, C. Haggerty, R. Bandyopadhyay, J. TenBarge, P. Cassak, A. Chasapis, J. Juno, L. B. Wilson, L. Sorriso-Valvo, M. Sitnov, I. Gingell, J. Shuster, K. Klein, W. H. Matthaeus, Y. Yang, S. Adhikari, M. Shay, M. Swisdak, L. Arzamasskiy, F. Guo, S. Wang, J. Verniero, S. Oughton, M. Kunz, M. Hasan Barbhuiya, J. Dahlin, N. Ahmadi, J. Drake, E. Lichko, D. Caprioli, J. Squire, H. Arnold, M. Wan, O. Pezzi, D. Trotta, A. Arya, G. G. Howes, T. Parashar, <a href="https://doi.org/10.3847/25c2cfeb.f79b0456"> Bulletin of the AAS, vol. 55(3), 2023</a>. <button onclick="window.open('Publications/21692977687668.pdf', '_blank')"> PDF </button></li> 
