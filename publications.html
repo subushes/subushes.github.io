@@ -89,6 +89,30 @@
             background-color: #0056b3; /* Change background color on hover */
         }
 
+	    ol.reversed-bracketed {
+	    list-style: none;
+	    counter-reset: item 11; /* One more than start value */
+	    padding-left: 1.5em;
+	}
+	
+	ol.reversed-bracketed li {
+	    counter-increment: item -1;
+	    position: relative;
+	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
+	    margin-bottom: 1rem;
+	    font-size: 1.1rem;
+	    line-height: 1.6;
+	}
+	
+	ol.reversed-bracketed li::before {
+	    content: "[" counter(item) "].";
+	    position: absolute;
+	    left: 0;
+	    
+	    width: 3em; /* Adds spacing between number and text */
+	    display: inline-block;
+	}
+
         section {
             padding: 2rem 1rem; /* Adjust side padding */
             margin: 0 auto;
@@ -148,8 +172,8 @@
     </nav>
     <section>
         <h2>Peer Reviewed Publications</h2>
-	<p> Publications in reversed chronological order. </p>
-        <ul style="list-style-type:none;">
+        <!--<ul style="list-style-type:none;">-->
+	<ol class="reversed-bracketed">
 	
         <h1><p style="color:LightGray;">2025</p></h1>
 	<hr width="100%" color='black' size="1.5">
@@ -197,7 +221,7 @@
 	<div style="background-color:Beige; padding: 15px; border-radius: 10px;"> 
                 <li> [1]. Reconnection from a turbulence perspective, S. Adhikari, M. A. Shay, T. N. Parashar, P. Sharma Pyakurel, W. H. Matthaeus, D. Godzieba, J. E. Stawarz, J. P. Eastwood, J. T. Dahlin, <a href="https://www.doi.org/10.1063/1.5128376"> Physics of Plasmas, 27, 042305 (2020)</a>. <button onclick="window.open('Publications/042305_1_online.pdf', '_blank')"> PDF </button></li>   
 	</div>
-	</ul>
+	</ol>
     </section>
     <section>
         <h2>White Papers</h2>
