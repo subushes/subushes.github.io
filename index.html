@@ -30,6 +30,53 @@
   			margin: 0.5px 0.5px;
  	 		cursor: pointer;
 		}
+			ol.reversed-bracketed {
+	    list-style: none;
+	    counter-reset: item 18; /* One more than start value */
+	    padding-left: 1.5em;
+	}
+	
+	ol.reversed-bracketed li {
+	    counter-increment: item -1;
+	    position: relative;
+	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
+	    margin-bottom: 1rem;
+	    font-size: 1.1rem;
+	    line-height: 1.6;
+	}
+	
+	ol.reversed-bracketed li::before {
+	    content: "[" counter(item) "].";
+	    position: absolute;
+	    left: 0;
+	    
+	    width: 3em; /* Adds spacing between number and text */
+	    display: inline-block;
+	}
+
+	ol.reversedd {
+	    list-style: none;
+	    counter-reset: item 5; /* One more than start value */
+	    padding-left: 1.5em;
+	}
+	
+	ol.reversedd li {
+	    counter-increment: item -1;
+	    position: relative;
+	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
+	    margin-bottom: 1rem;
+	    font-size: 1.1rem;
+	    line-height: 1.6;
+	}
+	
+	ol.reversedd li::before {
+	    content: "[" counter(item) "].";
+	    position: absolute;
+	    left: 0;
+	    
+	    width: 3em; /* Adds spacing between number and text */
+	    display: inline-block;
+	}
 			
 		</style>
 	</head>
@@ -91,6 +138,7 @@
 								<h2 class="major">Publications</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Peer Reviewed Publications</p>
+								<ol class="reversed-bracketed">
 								<h3><p style="color:LightGray;">2025</p></h3>
 								<hr width="100%" color='#FFFFFF' size="1.5">
 									<li> Characterization of the Turbulence Properties of the Solar Wind as Observed by Parker Solar Probe in Encounters 8-19, S. Adhikari, R. Bandyopadhyay, W. H. Matthaeus, D. Ruffalo, P. Thepthong, P. Pongkitiwanichakul, S. Roy, F. Pecora R. Chhiber, A. Usmanov, M. Stevens, S. Badman, O. Romeo, J. Wang, J. Goodwill, and Melvyn Goldstein, In Preparation, (2025). </li>
@@ -125,7 +173,16 @@
 								<h3><p style="color:LightGray;">2020</p></h3>
 								<hr width="100%" color='#FFFFFF' size="1.5">
          							       <li> Reconnection from a turbulence perspective, S. Adhikari, M. A. Shay, T. N. Parashar, P. Sharma Pyakurel, W. H. Matthaeus, D. Godzieba, J. E. Stawarz, J. P. Eastwood, J. T. Dahlin, <a href="https://www.doi.org/10.1063/1.5128376"> Physics of Plasmas, 27, 042305 (2020)</a>. <button onclick="window.open('Publications/042305_1_online.pdf', '_blank')" class="button"> PDF </button></li>   
-			
+								</ol>
+
+								<p>White Papers</p>
+       								<ol class="reversedd">
+								<hr width="100%" color='black' size="1.5">
+									<li> The Physics of Collisionless Dissipation in the Heliosphere, C. Haggerty, R. Bandyopadhyay, J. TenBarge, P. Cassak, A. Chasapis, J. Juno, L. B. Wilson, L. Sorriso-Valvo, M. Sitnov, I. Gingell, J. Shuster, K. Klein, W. H. Matthaeus, Y. Yang, S. Adhikari, M. Shay, M. Swisdak, L. Arzamasskiy, F. Guo, S. Wang, J. Verniero, S. Oughton, M. Kunz, M. Hasan Barbhuiya, J. Dahlin, N. Ahmadi, J. Drake, E. Lichko, D. Caprioli, J. Squire, H. Arnold, M. Wan, O. Pezzi, D. Trotta, A. Arya, G. G. Howes, T. Parashar, <a href="https://doi.org/10.3847/25c2cfeb.f79b0456"> Bulletin of the AAS, vol. 55(3), 2023</a>. <button class="button" onclick="window.open('Publications/21692977687668.pdf', '_blank')"> PDF </button></li> 
+									<li> Next Generation Machine to Study Heliophysics in the Laboratory, S. Dorfman, E. Lichko, J. Olson, J. Juno, E. Kostadinova, D. Schaffner, M. Abler, S. C. Thakur, P. Heuer, A. Mallet, F. Li, G. G. Howes, J. Squire, D. Endrizzi, R. Young, D. Schaeffer, K. Klein, R. Filwett, Y. Rivera, S. Guidoni, A. Timm, J. TenBarge, L. Matthews, L. Arzamasskiy, T. Du, L. Comisso, F. Effenberg, D. Fries, P. Shi, J. Verniero, L. Ofman, R. Meyrand, K. Moreland, L. Wang, S. Adhikari, V. Ledvina, S. Cranmer, C. Dong, C. R. Gilly, H. Ghadjari, S. Juie, C. Light, R. Sarkar, Y. H. Liu, M. Swisdak, B. J. Lynch, A. Maharana, X. Fu, J. Wanliss, P. Kumar, A. Kumari, L. Preisser, <a href="https://doi.org/10.3847/25c2cfeb.ea84c45e"> Bulletin of the AAS, vol. 55(3), (2023)</a>. <button class="button" onclick="window.open('Publications/21692976774776.pdf', '_blank')"> PDF </button></li>
+									<li> Enabling Discoveries in Heliospheric Science through Laboratory Plasma Experiments, E. Lichko, D. Endrizzi, J. Juno, J. Olson, S. Dorfman, R. Young, S. C. Thakur, E. Kostadinova, M. Abler, F. Li, D. Schaeffer, K. Klein, R. Filwett, Y. Rivera, S. Guidoni, A. Timm, P. Heuer, J. TenBarge, L. Matthews, L. Arzamasskiy, T. Du, G. G. Howes, L. Comisso, F. Effenberg, D. Fries, J. Squire, P. Shi, A. Mallet, J. Verniero, L. Ofman, R. Meyrand, K. Moreland, L. Wang, S. Adhikari, V. Ledvina, C. Dong, C. R. Gilly, H. Ghadjari, C. Light, R. Sarkar, Y. H. Liu, M. Swisdak, B. J. Lynch, A. Maharana, X. Fu, J. Wanliss, P. Kumar, P. Cassak, A. Kumari, <a href="https://doi.org/10.3847/25c2cfeb.c2b0c4e5"> Bulletin of the AAS, vol. 55(3), (2023)</a>. <button class="button" onclick="window.open('Publications/61692979057660.pdf', '_blank')"> PDF </button></li>
+									<li> The essential role of multi-point measurements in investigations of heliospheric turbulence, three-dimensional structure, and dynamics, Matthaeus W. H., Adhikari S., Bandyopadhyay R., Brown M. R., Bruno R., Borovsky J., Caprioli D., Carbone V., Chasapis A., Chhiber R., Dasso S., Del Zanna L., Dmitruk P. A., Franci L., Goldstein M. L., Greco A., Horbury T. S., Ji H., Kasper J. C., Klein K. G., Landi S., Lavraud B., Le Contel O., Li H., Malara F., Maruca B. A., Mininni P., Oughton S., Papini E., Parashar T. N., Pecora F., Petrosyan A., Pouquet A., Retinò A., Roberts O. W., Ruffolo D., Salem C. S., Servidio S., Shay M., Spence H. E., Smith C. W., Stawarz J. E., TenBarge J. M., Vasquez B. J., Vaivads A., Valentini F., Velli M., Verdini A., Verscharen D., Wicks R. T., and Yang Y., G. Zimbardo, <a href="https://doi.org/10.48550/arXiv.2211.12676"> Arxiv (2022)</a>. <button class="button" onclick="window.open('Publications/2211.12676v2.pdf', '_blank')"> PDF </button></li>
+        							</ol>
 							</article>
 
 						<!-- CV -->
