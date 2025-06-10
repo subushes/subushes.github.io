@@ -156,7 +156,12 @@
   			min-width: 100%; 
   			min-height: 100%;
 	}
-
+		.back-video{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+	}
 		
 	</style>
 	</head>
@@ -181,9 +186,9 @@
 							</div>
 						</div>
 						
-						<script>
-						var video = document.getElementById("myVideo");
-						</script>
+						<video autoplay loop muted plays-inline class="back-video">
+							<source src="images/Untitled.mp4" type="video/mp4">
+						</video>
 						
 						<nav>
 							<ul>
